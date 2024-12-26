@@ -1,0 +1,9 @@
+--- 
+-  hosts: all
+   become: true
+   tasks:
+
+     - ansible.builtin.dnf:
+         name: httpd
+         use_backend: dnf # alias for dnf4
+         state: latest
